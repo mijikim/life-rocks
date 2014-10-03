@@ -8,10 +8,13 @@
 </head>
 <body>
 
-<div> <%=link_to "Register", new_user_path%>
-      <%=link_to "Login", new_session_path%> </div>
+<hr/>
+<%= form_for User.new do |f| %>
+  <%=f.text_field :email, placeholder: "Email Address" %>
+  <%=f.submit "Send me a LifeRocks Method"%>
+<% end%>
 
-
+<hr/>
 <%= yield %>
 
 </body>
