@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liferocks</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div> <%=link_to "Register", new_user_path%>
+      <%=link_to "Login", new_session_path%> </div>
+
+
+<%= yield %>
+
+</body>
+</html>
