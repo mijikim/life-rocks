@@ -2,6 +2,15 @@
 <html>
 <head>
   <title>Liferocks</title>
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,13 +18,14 @@
 <body>
 
 <hr/>
-<%= form_for User.new do |f| %>
-  <%=f.text_field :email, placeholder: "Email Address" %>
-  <%=f.submit "Send me a LifeRocks Method"%>
-<% end%>
+
 
 <hr/>
 <%= yield %>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
 </body>
 </html>
