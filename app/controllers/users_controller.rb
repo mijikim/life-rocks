@@ -1,11 +1,13 @@
 class UsersController < ApplicationController
 
-  def new
-    @user = User.new
+  skip_before_action :ensure_current_user, only: [:new, :create]
 
-  end
+
 
   def create
+    @user = User.create(email: params[:email])
+    @user.save!
+    redirect_to messages_path
 
 
   end
