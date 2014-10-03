@@ -5,7 +5,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(email: params[:email])
-    espond_to do |format|
+
+    respond_to do |format|
       if @user.save
         # Tell the UserMailer to send a welcome email after save
         UserMailer.welcome_email(@user).deliver
