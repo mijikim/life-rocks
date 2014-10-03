@@ -7,7 +7,8 @@ class UsersController < ApplicationController
   def create
     @user = User.create(email: params[:email])
     @user.save!
-    redirect_to messages_path
+
+    redirect_to root_path
 
 
   end
