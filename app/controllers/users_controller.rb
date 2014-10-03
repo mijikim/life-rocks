@@ -5,8 +5,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(email: params[:email])
+    @messages = Message.all
 
-      if @user.save
+
+    if @user.save
         UserMailer.motivational_email(@user).deliver
         redirect_to messages_path
 
