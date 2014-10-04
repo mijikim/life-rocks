@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Liferocks</title>
-  <%= stylesheet_link_tag    'new', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'new', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<div class="jumbotron">
+  <h1>Life Rocks!</h1>
+  <p>Down in the dumps?  Send yourself a little slice of joy each morning to start the day... After all, Life Rocks!</p>
+  <%= form_for @user do |f| %>
+    <%= f.text_field :email, placeholder: "Email Address" %>
+    <%= f.submit "Send me a LifeRocks Method" %>
+  <% end %>
 
-<hr/>
-<%= form_for @user do |f| %>
-  <%=f.text_field :email, placeholder: "Email Address" %>
-  <%=f.submit "Send me a LifeRocks Method"%>
-<% end%>
-
-<hr/>
-<%= yield %>
-
-</body>
-</html>
+</div>

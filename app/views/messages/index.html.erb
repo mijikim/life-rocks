@@ -1,1 +1,9 @@
-Yo
+<div class="jumbotron">
+  <h1>Life Rocks!</h1>
+  <p>Down in the dumps?  Send yourself a little slice of joy each morning to start the day... After all, Life Rocks!</p>
+  <%= form_for User.new do |f| %>
+    <%=f.text_field :email, placeholder: "Email Address" %>
+    <%=f.submit "Make Me Happy!", class:"btn btn-primary btn-lg"%>
+  <% end%>
+
+</div>
