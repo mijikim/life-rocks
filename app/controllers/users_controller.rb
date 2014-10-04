@@ -11,8 +11,11 @@ class UsersController < ApplicationController
 
     if @user.save!
         UserMailer.motivational_email(@user).deliver
-        redirect_to '/'
-    end
+        redirect_to new_user_path
+  else
+    render :new
+  end
+
   end
 
 
