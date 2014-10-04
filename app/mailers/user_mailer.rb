@@ -5,7 +5,7 @@ class UserMailer < ActionMailer::Base
     @user = user
     @message = Message.order("RANDOM()").first
 
-    @url = 'http://localhost:3000/'
+    @url = 'http://liferocks.herokuapp.com/'
     mail(to: @user.email, subject: "Your Motivational Quote")
   end
 
