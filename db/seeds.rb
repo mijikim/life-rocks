@@ -9,7 +9,7 @@
 
 messages = ["Congratulations on doing what you are pay to do",
 
- "Congratulations on your new job that you probably won’t like any better.",
+ "Congratulations on your index job that you probably won’t like any better.",
 
  "Congratulations on somehow not marrying the wrong person.",
 
