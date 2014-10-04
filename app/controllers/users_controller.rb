@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
     if @user.save!
         UserMailer.motivational_email(@user).deliver
-        redirect_to messages_path
+        redirect_to root_path
     end
   end
 
