@@ -2,14 +2,14 @@
 <html>
 <head>
   <title>Liferocks</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'new', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'new', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <hr/>
-<%= form_for User.new do |f| %>
+<%= form_for @user do |f| %>
   <%=f.text_field :email, placeholder: "Email Address" %>
   <%=f.submit "Send me a LifeRocks Method"%>
 <% end%>

@@ -6,4 +6,5 @@ class UserMailer < ActionMailer::Base
     @url = 'http://localhost:3000/'
     mail(to: @user.email, subject: "Your Motivational Quote")
   end
+
 end
